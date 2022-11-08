@@ -125,6 +125,7 @@ function App() {
             id="outlined-basic"
             label="Введите пример : 1+2"
             variant="outlined"
+            style={{ width: '350px' }}
             onChange={(e) => setValueInp(e.target.value)}
             value={valueInp}
             onKeyDown={(e) => pressEnter(e)}
