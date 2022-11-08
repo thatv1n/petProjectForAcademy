@@ -1,11 +1,7 @@
 .App {
   text-align: center;
   margin-top: 50px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  padding: 0px 10px;
 }
 
 .form {
@@ -44,7 +40,7 @@
 }
 
 .groupButtons {
-  width: 400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
