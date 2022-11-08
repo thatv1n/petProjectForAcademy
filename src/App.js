@@ -6,7 +6,7 @@ import './App.css';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import ClearIcon from '@mui/icons-material/Clear';
+import Examples from './components/examples/Examples';
 
 const styleAddBtn = {
   color: 'white',
@@ -57,22 +57,6 @@ function App() {
     setData(del);
     ls('examples', del);
   };
-
-  const mapData = data.map((item, i) => (
-    <div
-      key={i}
-      className={isDel ? 'exapmleDel' : 'exapmle'}
-      onClick={() => isDel && delData(item.id)}>
-      <div>
-        {isDel && (
-          <span style={{ position: 'relative', left: '-10px' }}>
-            <ClearIcon />
-          </span>
-        )}{' '}
-        {`${item.example} = __`}
-      </div>
-    </div>
-  ));
 
   const randomData = data
     .map(function (elem, index) {
@@ -150,7 +134,7 @@ function App() {
         </div>
       </div>
 
-      <div className="content">{mapData}</div>
+      <div className="content">{<Examples data={data} isDel={isDel} delData={delData} />}</div>
     </div>
   );
 }
