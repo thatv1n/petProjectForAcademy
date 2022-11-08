@@ -115,6 +115,7 @@ function App() {
   const resetLc = () => {
     ls('examples', []);
     setData([]);
+    setIsDel(false);
   };
 
   return (

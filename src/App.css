@@ -27,7 +27,7 @@
 .exapmle,
 .exapmleDel {
   font-size: 18px;
-  margin: 15px 2%;
+  margin: 15px 1%;
   display: inline-block;
   width: 150px;
   transition: background 0.3s;
@@ -52,7 +52,7 @@
 }
 
 .exapmleDel:hover {
-  background: #ff000059;
+  /* background: #ff000059; */
   cursor: pointer;
   border-radius: 3px;
 }
