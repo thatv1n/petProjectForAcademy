@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/petProjectForAcademy/static/css/main.999a1681.css",
-    "main.js": "/petProjectForAcademy/static/js/main.f11df9d7.js",
+    "main.js": "/petProjectForAcademy/static/js/main.2fe6d5dc.js",
     "index.html": "/petProjectForAcademy/index.html",
     "main.999a1681.css.map": "/petProjectForAcademy/static/css/main.999a1681.css.map",
-    "main.f11df9d7.js.map": "/petProjectForAcademy/static/js/main.f11df9d7.js.map"
+    "main.2fe6d5dc.js.map": "/petProjectForAcademy/static/js/main.2fe6d5dc.js.map"
   },
   "entrypoints": [
     "static/css/main.999a1681.css",
-    "static/js/main.f11df9d7.js"
+    "static/js/main.2fe6d5dc.js"
   ]
 }
