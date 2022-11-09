@@ -54,7 +54,6 @@ const Accordeon = ({ setData, ls }) => {
         }
       }
     }
-    console.log(arr);
     const randomData = arr
       .map(function (elem) {
         return [elem, Math.random()];
