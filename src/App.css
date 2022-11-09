@@ -58,7 +58,10 @@
 }
 
 .inputField {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
+  min-width: 310px;
+
   margin-bottom: 15px;
 }
 

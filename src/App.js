@@ -36,6 +36,15 @@ const styleRandomBtn = {
   width: '160px',
 };
 
+const styleEditBtn = {
+  color: 'white',
+  backgroundColor: 'blue',
+  fontSize: '15px',
+  fontWeight: 'bold',
+  border: '1px solid blue',
+  width: '160px',
+};
+
 function App() {
   const [data, setData] = React.useState([]);
   const [valueInp, setValueInp] = React.useState('');
@@ -126,7 +135,10 @@ function App() {
           </Button>
         </div>
         <div className="groupButtons">
-          <Button variant="outlined" onClick={() => setIsDel((isDel) => !isDel)}>
+          <Button
+            variant="outlined"
+            onClick={() => setIsDel((isDel) => !isDel)}
+            style={styleEditBtn}>
             Редактировать
           </Button>
           <Button variant="outlined" onClick={resetLc} style={styleResetBtn}>
