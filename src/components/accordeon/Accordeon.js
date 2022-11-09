@@ -117,7 +117,7 @@ const Accordeon = ({ setData, ls }) => {
             </FormGroup>
           </div>
           <Button variant="outlined" onClick={ganarateExamples}>
-            Генерировать
+            Создать
           </Button>
         </AccordionDetails>
       </Accordion>
