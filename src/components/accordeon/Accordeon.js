@@ -32,20 +32,23 @@ const Accordeon = ({ setData, ls }) => {
       if (option.length > 1) {
         for (let i = 1; i <= count; i++) {
           for (let j = 1; j <= min; j++) {
-            if (option[i] !== '-' && i > j) {
-              for (let y = 0; y < 2; y++)
-                arr.push({ id: arr.length + 1, example: `${i}${option[y]}${j}` });
-            } else {
-              arr.push({ id: arr.length + 1, example: `${i}+${j}` });
+            if (j <= max && i <= min) {
+              if (option[i] !== '-' && i > j) {
+                for (let y = 0; y < 2; y++)
+                  arr.push({ id: arr.length + 1, example: `${i}${option[y]}${j}` });
+              } else {
+                arr.push({ id: arr.length + 1, example: `${i}+${j}` });
+              }
             }
           }
         }
       } else {
         for (let i = 1; i <= count; i++) {
           for (let j = 1; j <= min; j++) {
-            if (option[i] !== '-' && i > j) {
-              for (let y = 0; y < 2; y++)
+            if (j <= max && i <= min) {
+              if (option[i] !== '-' && i >= j) {
                 arr.push({ id: arr.length + 1, example: `${i}${option}${j}` });
+              }
             }
           }
         }
