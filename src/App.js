@@ -7,6 +7,7 @@ import './App.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Examples from './components/examples/Examples';
+import Accordeon from './components/accordeon/Accordeon';
 
 const styleAddBtn = {
   color: 'white',
@@ -108,7 +109,7 @@ function App() {
         <div className="input">
           <TextField
             id="outlined-basic"
-            label="Введите пример : 1+2"
+            label="Введите пример : 1 + 2"
             variant="outlined"
             style={{ width: '350px' }}
             onChange={(e) => setValueInp(e.target.value)}
@@ -132,6 +133,7 @@ function App() {
             Очистить все
           </Button>
         </div>
+        <Accordeon setData={setData} randomData={randomData} ls={ls} />
       </div>
 
       <div className="content">{<Examples data={data} isDel={isDel} delData={delData} />}</div>

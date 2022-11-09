@@ -56,3 +56,12 @@
   cursor: pointer;
   border-radius: 3px;
 }
+
+.inputField {
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+.inputField div {
+  width: 100%;
+}
