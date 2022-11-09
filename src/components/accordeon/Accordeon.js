@@ -7,6 +7,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+
 import TextField from '@mui/material/TextField';
 
 const Accordeon = ({ setData, ls }) => {
@@ -16,10 +20,35 @@ const Accordeon = ({ setData, ls }) => {
 
   const ganarateExamples = () => {
     const arr = [];
+    let option = [];
+    const checkboxes = document.getElementsByName('option');
 
-    for (let i = 1; i <= count; i++) {
-      for (let j = 1; j <= min; j++) {
-        arr.push({ id: arr.length + 1, example: `${i}+${j}` });
+    for (const checkbox of checkboxes) {
+      if (checkbox.checked) {
+        option.push(checkbox.value);
+      }
+    }
+    if (option.length) {
+      if (option.length > 1) {
+        for (let i = 1; i <= count; i++) {
+          for (let j = 1; j <= min; j++) {
+            if (option[i] !== '-' && i > j) {
+              for (let y = 0; y < 2; y++)
+                arr.push({ id: arr.length + 1, example: `${i}${option[y]}${j}` });
+            } else {
+              arr.push({ id: arr.length + 1, example: `${i}+${j}` });
+            }
+          }
+        }
+      } else {
+        for (let i = 1; i <= count; i++) {
+          for (let j = 1; j <= min; j++) {
+            if (option[i] !== '-' && i > j) {
+              for (let y = 0; y < 2; y++)
+                arr.push({ id: arr.length + 1, example: `${i}${option}${j}` });
+            }
+          }
+        }
       }
     }
 
@@ -75,6 +104,17 @@ const Accordeon = ({ setData, ls }) => {
               onChange={(e) => setCount(e.target.value)}
               value={count}
             />
+          </div>
+          <div className="checkboxGroup">
+            <FormGroup>
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label="Сложение"
+                name="option"
+                value="+"
+              />
+              <FormControlLabel control={<Checkbox />} label="Вычитание" name="option" value="-" />
+            </FormGroup>
           </div>
           <Button variant="outlined" onClick={ganarateExamples}>
             Генерировать
