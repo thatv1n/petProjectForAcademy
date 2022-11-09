@@ -14,8 +14,8 @@ import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
 
 const Accordeon = ({ setData, ls }) => {
-  const [min, setMin] = React.useState('');
-  const [max, setMax] = React.useState('');
+  const [a, setA] = React.useState('');
+  const [b, setB] = React.useState('');
   const [count, setCount] = React.useState('');
 
   const ganarateExamples = () => {
@@ -31,8 +31,8 @@ const Accordeon = ({ setData, ls }) => {
     if (option.length) {
       if (option.length > 1) {
         for (let i = 1; i <= count; i++) {
-          for (let j = 1; j <= min; j++) {
-            if (j <= max && i <= min) {
+          for (let j = 1; j <= a; j++) {
+            if (j <= b && i <= a) {
               if (option[i] !== '-' && i > j) {
                 for (let y = 0; y < 2; y++)
                   arr.push({ id: arr.length + 1, example: `${i}${option[y]}${j}` });
@@ -44,8 +44,8 @@ const Accordeon = ({ setData, ls }) => {
         }
       } else {
         for (let i = 1; i <= count; i++) {
-          for (let j = 1; j <= min; j++) {
-            if (j <= max && i <= min) {
+          for (let j = 1; j <= a; j++) {
+            if (j <= b && i <= a) {
               if (option[i] !== '-' && i >= j) {
                 arr.push({ id: arr.length + 1, example: `${i}${option}${j}` });
               }
@@ -86,8 +86,8 @@ const Accordeon = ({ setData, ls }) => {
               id="standard-basic"
               label="Мин. значение"
               variant="standard"
-              onChange={(e) => setMin(e.target.value)}
-              value={min}
+              onChange={(e) => setB(e.target.value)}
+              value={b}
             />
           </div>
           <div className="inputField">
@@ -95,8 +95,8 @@ const Accordeon = ({ setData, ls }) => {
               id="standard-basic"
               label="Макс. значение"
               variant="standard"
-              onChange={(e) => setMax(e.target.value)}
-              value={max}
+              onChange={(e) => setA(e.target.value)}
+              value={a}
             />
           </div>
           <div className="inputField">
